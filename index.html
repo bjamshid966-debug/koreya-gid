@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Koreya gidi — joylar, narxlar, talabalar uchun ish va kirish yo‘li</title>
+<meta name="description" content="Janubiy Koreya bo‘yicha o‘zbek tilidagi to‘liq qo‘llanma.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="petals" aria-hidden="true"></canvas>
+<header class="top">
+  <a class="brand" href="#bosh">한국 gidi</a>
+  <nav><a href="#joylar">Joylar</a><a href="#narx">Narxlar</a><a href="#top40">Top 40</a><a href="#ish">Ish</a><a href="#kirish">Kirish</a><a href="#suz">Iboralar</a></nav>
+</header>
+<main>
+<section id="bosh" class="hero">
+  <div class="han" aria-hidden="true">한국</div>
+  <h1>Koreyaga borishdan oldin bilish kerak bo‘lgan hamma narsa</h1>
+  <p>Seuldan Jejugacha qiziqarli joylar, do‘kon narxlari, eng ko‘p olinadigan 40 ta narsa, talabalar uchun ishlar va viza bo‘yicha qadamlar. Hammasi bir sahifada.</p>
+  <div class="stats"><div><b data-n="17">0</b><span>joy</span></div><div><b data-n="40">0</b><span>mashhur mahsulot</span></div><div><b data-n="8">0</b><span>talaba ishi</span></div><div><b data-n="6">0</b><span>kirish qadami</span></div></div>
+</section>
+
+<section id="joylar" class="sec">
+  <h2>Qayerga borish mumkin</h2>
+  <div class="chips" id="chips"></div>
+  <div class="cards" id="places"></div>
+</section>
+
+<section id="narx" class="sec">
+  <h2>Narxlar va oylik xarajat</h2>
+  <p class="lead">Narxlar taxminiy va shaharga qarab o‘zgaradi. Kursni o‘zingiz yangilang.</p>
+  <div class="rates">
+    <label>1 USD = <input id="r-krw" type="number" value="1400"> ₩</label>
+    <label>1 USD = <input id="r-uzs" type="number" value="12000"> so‘m</label>
+  </div>
+  <div class="two">
+    <div class="panel"><h3>Oylik byudjet (talaba)</h3><div id="budget"></div><p class="total">Jami: <b id="b-krw"></b> ₩ ≈ <b id="b-usd"></b> $ ≈ <b id="b-uzs"></b> so‘m</p></div>
+    <div class="panel"><h3>Do‘konlarda narx</h3>
+      <table><thead><tr><th>Mahsulot</th><th>Konbini</th><th>Supermarket</th></tr></thead><tbody id="shop"></tbody></table>
+      <p class="small">Konbini: GS25, CU, 7-Eleven (24 soat, qimmatroq). Supermarket: E-mart, Lotte Mart, Homeplus. Arzon buyumlar: Daiso (1 000–5 000₩). Kosmetika: Olive Young.</p></div>
+  </div>
+</section>
+
+<section id="top40" class="sec">
+  <h2>Eng ko‘p olinadigan 40 ta narsa</h2>
+  <p class="lead">Bu rasmiy reyting emas: turistlar va talabalar orasida eng mashhur narsalar. Narxlar taxminiy.</p>
+  <div class="tools"><input id="q" placeholder="Qidirish…" aria-label="Qidirish"><select id="cat" aria-label="Toifa"></select><select id="sort" aria-label="Saralash"><option value="i">Tartib bo‘yicha</option><option value="lo">Arzonroqlari</option><option value="hi">Qimmatroqlari</option></select></div>
+  <ol class="list" id="top"></ol>
+</section>
+
+<section id="ish" class="sec">
+  <h2>Talabalar uchun eng yaxshi ishlar</h2>
+  <p class="lead">D-2 yoki D-4 vizadagi talaba ishlashdan oldin immigratsiyadan ruxsat olishi shart. Ruxsatsiz ishlash vizaning bekor qilinishiga olib kelishi mumkin.</p>
+  <div class="cards" id="jobs"></div>
+  <div class="panel calc"><h3>Oylik daromad hisobi</h3>
+    <label>Soatlik narx: <input id="w" type="number" value="10320"> ₩</label>
+    <label>Haftasiga soat: <input id="h" type="range" min="5" max="20" value="15"> <b id="hv">15</b></label>
+    <p>Taxminan <b id="inc"></b> ₩ oyiga (soliqdan oldin).</p>
+    <p class="small">2026-yil eng kam soatlik ish haqi 10 320₩. Semestrda odatda haftasiga 20 soatgacha, ta’tilda ko‘proq mumkin. TOPIK darajangiz soatlarga ta’sir qiladi. Qoidalar o‘zgaradi: HiKorea yoki universitet xalqaro bo‘limidan tekshiring.</p></div>
+</section>
+
+<section id="kirish" class="sec">
+  <h2>Koreyaga qanday kirish kerak</h2>
+  <p class="lead">Maqsadingizga qarab viza turi har xil: sayohat (C-3), til kursi (D-4), universitet (D-2), EPS orqali ishlash (E-9). Viza talablarini albatta Koreya elchixonasi saytidan tasdiqlang.</p>
+  <ol class="steps" id="steps"></ol>
+  <p class="warn">Vositachi firmalarga oldindan katta pul bermang. Hujjatlarni faqat rasmiy saytlar orqali topshiring: studyinkorea.go.kr, hikorea.go.kr, universitet sayti.</p>
+</section>
+
+<section id="suz" class="sec">
+  <h2>Foydali iboralar</h2>
+  <div class="cards" id="phr"></div>
+</section>
+</main>
+<footer><p>Ma’lumotlar umumiy ma’lumot uchun. Viza, narx va ish qoidalari o‘zgarib turadi, qaror qilishdan oldin rasmiy manbalarni tekshiring.</p></footer>
+<script src="app.js"></script>
+</body></html>
